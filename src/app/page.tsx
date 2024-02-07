@@ -32,14 +32,17 @@ export default function Home() {
             </div>
           </div>
           <div className="relative grid grid-cols-2 gap-6 border rounded-3xl border-none order-first lg:order-none">
-            <div style={{ gridArea: "1 / 1 / 2 / 2", animation: "levitate 16s ease infinite", position: "relative", top: "100px" }}>
-              <Image src="/Cone.png" className="drop-shadow-2xl sm:w-[240px] sm:h-[240px]" alt="printer" width={130} height={130} />
+            <div className="top-[60px] sm:top-[100px]" style={{ gridArea: "1 / 1 / 2 / 2", animation: "levitate 16s ease infinite", position: "relative" }}>
+              <Image src="/octogonlight1.png" className="hidden dark:block drop-shadow-2xl sm:w-[140px] lg:w-[240px] " alt="printer" width={130} height={130} />
+              <Image src="/octogondark.png" className="block dark:hidden drop-shadow-2xl sm:w-[140px] lg:w-[240px]" alt="printer" width={130} height={130} />
             </div>
             <div style={{ gridArea: "2 / 2 / 3 / 3", animation: "levitate 12s ease 1s infinite" }}>
-              <Image src="/Cube1.png" className="drop-shadow-2xl sm:w-[240px] sm:h-[240px]" alt="printer" width={130} height={130} />
+              <Image src="/circlelight1.png" className="hidden dark:block drop-shadow-2xl sm:w-[140px] lg:w-[240px]" alt="printer" width={130} height={130} />
+              <Image src="/circledark.png" className="block dark:hidden drop-shadow-2xl sm:w-[140px] lg:w-[240px]" alt="printer" width={130} height={130} />
             </div>
             <div style={{ gridArea: "1 / 2 / 3 / 3", animation: "levitate 14s ease 1s infinite", marginTop: "-20px" }}>
-              <Image src="/Cone.png" className="drop-shadow-2xl sm:w-[240px] sm:h-[240px]" alt="printer" width={130} height={130} />
+              <Image src="/rectlight1.png" className="hidden dark:block drop-shadow-2xl sm:w-[140px] lg:w-[240px]" alt="printer" width={130} height={130} />
+              <Image src="/rectdark.png" className="block dark:hidden drop-shadow-2xl sm:w-[140px] lg:w-[240px]" alt="printer" width={130} height={130} />
             </div>
     </div>
 
