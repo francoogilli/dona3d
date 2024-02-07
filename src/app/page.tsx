@@ -11,7 +11,7 @@ export default function Home() {
             <div className="text-center leading-8 md:leading-10 md:text-left">
               <div className="inline-block">
                 <h1 className=" tracking-tight inline font-bold text-[2.5rem] lg:text-[3.25rem]">
-                  Haz  
+                  Hace  
                   <span className="tracking-tight inline font-bold from-[#3d2fff] to-[#717dfe] text-[2.5rem] lg:text-[3.25rem] bg-clip-text text-transparent bg-gradient-to-b"> realidad </span>
                   tus ideas con impresión 3D
                 </h1>
