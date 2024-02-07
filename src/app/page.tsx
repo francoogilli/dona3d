@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
             <section className="flex flex-col items-center justify-center">
-            <div className="flex flex-col gap-5 lg:flex-row relative overflow-hidden w-full justify-between items-center pt-10 sm:pt-20  md:h-[calc(100vh_-_64px)] 2xl:h-[calc(84vh_-_64px)]">
+            <div className="flex flex-col gap-16 lg:flex-row relative overflow-hidden w-full justify-between items-center pt-10 sm:pt-20  md:h-[calc(100vh_-_64px)] 2xl:h-[calc(84vh_-_64px)]">
           <div className="flex relative z-20 flex-col gap-6 w-full lg:w-1/2 xl:mt-10">
             <div className="text-center leading-8 md:leading-10 md:text-left">
               <div className="inline-block">
@@ -31,7 +31,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="relative grid grid-cols-2 gap-6 border rounded-3xl border-none order-first lg:order-none">
+          <div className="relative grid grid-cols-2 gap-2 sm:gap-6 border rounded-3xl border-none order-first lg:order-none">
             <div className="top-[60px] sm:top-[100px]" style={{ gridArea: "1 / 1 / 2 / 2", animation: "levitate 16s ease infinite", position: "relative" }}>
               <Image src="/octogonlight1.png" className="hidden dark:block drop-shadow-2xl sm:w-[140px] lg:w-[240px] " alt="printer" width={130} height={130} />
               <Image src="/octogondark.png" className="block dark:hidden drop-shadow-2xl sm:w-[140px] lg:w-[240px]" alt="printer" width={130} height={130} />
