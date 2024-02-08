@@ -10,9 +10,9 @@ export default function Home() {
           <div className="flex relative z-20 flex-col gap-6 w-full lg:w-1/2 xl:mt-10">
             <div className="text-center leading-8 md:leading-10 md:text-left">
               <div className="inline-block">
-                <h1 className=" tracking-tight inline font-bold text-[2.5rem] lg:text-[3.25rem]">
+                <h1 className=" tracking-tight inline font-bold text-[2.5rem] lg:text-[3.35rem]">
                   Hace  
-                  <span className="tracking-tight inline font-bold from-[#3d2fff] to-[#717dfe] text-[2.5rem] lg:text-[3.25rem] bg-clip-text text-transparent bg-gradient-to-b"> realidad </span>
+                  <span className="tracking-tight inline font-bold from-[#717dfe] to-[#3d2fff] text-[2.5rem] lg:text-[3.25rem] bg-clip-text text-transparent bg-gradient-to-b"> realidad </span>
                   tus ideas con impresión 3D
                 </h1>
               </div>
@@ -21,7 +21,7 @@ export default function Home() {
             Brindamos servicios de impresión de alta calidad para transformar sus deseos en realidad.
             </h2>
             <div className="flex flex-row justify-center md:justify-start text-base items-center gap-4">
-              <a href="" className="flex items-center font-medium text-white bg-[#0065D8] rounded-full px-6 py-3">
+              <a href="" className="flex items-center font-medium text-white from-[#6e7afd] to-[#4236f6] bg-gradient-to-bl rounded-full px-6 py-3">
                 Contactar
                 <Icon icon="gravity-ui:arrow-right" className="ml-2" />
               </a>
