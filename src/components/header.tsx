@@ -7,7 +7,7 @@ const Header = () => {
     
     
     return (
-        <div className="sticky inset-x-0  top-0 z-30 w-full transition-all " id="header-nav">
+        <div className="sticky inset-x-0 backdrop-blur-2xl top-0 z-30 w-full transition-all " id="header-nav">
       <div className="flex h-[47px] mx-auto lg:w-10/12 items-center justify-between px-4">
         <div className="flex items-center gap-x-3 justify-center">
         <div className="border border-dashed size-7 rounded-lg bg-zinc-100 dark:bg-zinc-800 border-black dark:border-white">     
