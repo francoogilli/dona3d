@@ -46,7 +46,7 @@ export default function FeaturesGrid(){
             <Icon icon="fa6-regular:user" className="w-12 h-12 mx-auto" />
             <h3 className="text-lg font-bold">Excellent customer support</h3>
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              We're here to help you at every step of the printing process.
+            We&apos;re here to help you at every step of the printing process.
             </p>
           </div>
         </div>
