@@ -30,8 +30,8 @@ export const FeaturesGridData = [
     },
     {
         icon:"material-symbols:dashboard-customize-outline-rounded",
-        title:"Trabajos personalizados",
-        description:"Nos especializamos en la adaptación precisa de modelos según las exigencias individuales de nuestros clientes."
+        title:"Personalizado",
+        description:"Nos especializamos en la adaptación precisa de modelos según las exigencias propias de nuestros clientes."
     },
     {
         icon:"ph:cube-bold",
@@ -40,7 +40,7 @@ export const FeaturesGridData = [
     },
     {
         icon:"ic:sharp-color-lens",
-        title:"30+ Colores disponibles",
+        title:"30+ Colores ",
         description:"Contamos con una extensa gamas de colores, permitiendo una personalización unica en cada impresión."
     },
     {
