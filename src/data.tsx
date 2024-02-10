@@ -13,7 +13,7 @@ export const FAQs = [
     },
     {
         ask:"¿Puedo solicitar la impresión de un modelo ya tengo desde antes?",
-        answer:"Sí; si ya tiene un modelo 3d y desea imprimirlo, puede enviarlo al mail rafaeldona3d@gmail.com y le pasaremos u presupuesto."
+        answer:"Por supuesto, si ya tiene un modelo 3d y desea imprimirlo, puede enviarlo al mail rafaeldona3d@gmail.com y le pasaremos un presupuesto."
     }
 ]
 
