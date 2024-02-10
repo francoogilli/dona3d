@@ -9,7 +9,7 @@ export default function FeaturesGrid() {
           <div className="flex flex-col justify-center space-y-8 text-center">
             <div className="space-y-2">
               <h1 className="text-4xl pb-1 px-3 sm:px-0 font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-zinc-950 dark:from-white dark:to-gray-300">
-              Porqué elegir Dona 3D
+              Porqué elegir <span className="inline from-[#1e6cff] to-[#0840f8] bg-clip-text text-transparent bg-gradient-to-b">Dona 3D</span>
               </h1>
               <p className="max-w-[600px] text-zinc-800 md:text-xl dark:text-zinc-100 mx-auto">
               Descubre una innovadora solución que combina tecnología unica con diseño personalizado.
