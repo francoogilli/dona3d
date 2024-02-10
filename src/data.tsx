@@ -16,3 +16,36 @@ export const FAQs = [
         answer:"Sí; si ya tiene un modelo 3d y desea imprimirlo, puede enviarlo al mail rafaeldona3d@gmail.com y le pasaremos u presupuesto."
     }
 ]
+
+export const FeaturesGridData = [
+    {
+        icon:"material-symbols:work",
+        title:"+4 Años",
+        description:"Con una trayectoria de más de 4 años en el campo del diseño e impresión 3D, consolidado nuestra experiencia."
+    },
+    {
+        icon:"lucide:merge",
+        title:"Ultima tecnologia",
+        description:"Trabajamos con impresoras 3D de última generación, garantizando así la más alta calidad en nuestros proyectos."
+    },
+    {
+        icon:"material-symbols:dashboard-customize-outline-rounded",
+        title:"Trabajos personalizados",
+        description:"Nos especializamos en la adaptación precisa de modelos según las exigencias individuales de nuestros clientes."
+    },
+    {
+        icon:"ph:cube-bold",
+        title:"Primera calidad",
+        description:"Trabajamos con materiales premium de proveedores como PrintaLot y Grilon3, con 4 opciones disponibles para elegir."
+    },
+    {
+        icon:"ic:sharp-color-lens",
+        title:"30+ Colores disponibles",
+        description:"Contamos con una extensa gamas de colores, permitiendo una personalización unica en cada impresión."
+    },
+    {
+        icon:"mdi:printer-3d-nozzle",
+        title:"4 impresoras 3D",
+        description:"Contamos con cuatro impresoras 3D de vanguardia para atender tus necesidades con eficacia."
+    }
+]
