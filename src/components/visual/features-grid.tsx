@@ -19,7 +19,7 @@ export default function FeaturesGrid() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {
                   FeaturesGridData.map((feature, index) => (
-                    <div key={index} className="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
+                    <div key={index} className="flex flex-col items-center space-y-2 border-gray-800 py-3 sm:py-5 px-4 rounded-lg">
                       <div className="p-1 flex flex-row sm:flex-col justify-center items-center bg-opacity-90 dark:bg-opacity-50 rounded-full">
                         <Icon icon={feature.icon} className="text-zinc-900 dark:text-white size-9 mb-0 mx-3 sm:mb-5 opacity-95 dark:opacity-85" />
                         <h2 className="text-[1.4rem] font-bold text-zinc-900 dark:text-white">{feature.title}</h2>
