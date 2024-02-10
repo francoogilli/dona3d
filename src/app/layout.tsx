@@ -7,6 +7,7 @@ import Header from 'src/components/header';
 import HeaderMobile from 'src/components/header-mobile';
 import MarginWidthWrapper from 'src/components/margin-width-wrapper';
 import PageWrapper from 'src/components/page-wrapper';
+import Footer from 'src/components/footer';
 
 
 const montserrat = Montserrat ({  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"], style: "normal", subsets: ["latin"] });  
@@ -33,6 +34,7 @@ export default function RootLayout({
               <MarginWidthWrapper>
                 <HeaderMobile />
                 <PageWrapper>{children}</PageWrapper>
+                <Footer />
               </MarginWidthWrapper>
             </main>
           </div>
