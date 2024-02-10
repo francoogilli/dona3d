@@ -26,7 +26,7 @@ export default function Footer(){
                     </div>
 
 
-                    <div className="grid w-full grid-cols-2 gap-8 sm:gap-20 sm:w-full lg:grid-cols-4">
+                    <div className="grid w-full grid-cols-2 gap-20 sm:w-full lg:grid-cols-4">
                         <div className='flex flex-col gap-4'>
                             <p className='mb-2 ml-1.5 text-sm dark:text-white font-semibold'>Contacto</p>
                             <a href="" className='text-sm font-medium dark:text-zinc-400'>Libertad 494</a>
