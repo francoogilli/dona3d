@@ -9,7 +9,7 @@ export default function Footer(){
                     <div className="flex w-full flex-row sm:w-1/3 sm:flex-col">
 
                         <div className="flex w-full flex-col gap-8 sm:mb-8">
-                            <p className='font-bold text-sm'>Nuestras redes</p>
+                            <p className='font-semibold text-sm'>Nuestras redes</p>
                         </div>
                         <div className="flex w-full gap-4">
                             <a href="" className="outline-none transition duration-150 ease-in-out 0 focus-visible:ring-slate-400 rounded-full">
