@@ -31,7 +31,7 @@ export default function Hero(){
           </div>
           <div className="relative grid grid-cols-1 gap-2 sm:gap-6 border rounded-3xl border-none order-first lg:order-none">
             <div className="" style={{ animation: "levitate 16s ease infinite", position: "relative" }}>
-              <Image src="/octogonlight.png" draggable={false} className="hidden select-none dark:block drop-shadow-2xl w-[170px] sm:w-[190px] md:w-[250px] lg:w-[400px]" alt="printer" width={400} height={400} />
+              <Image src="/octogonlight2.png" draggable={false} className="hidden select-none dark:block drop-shadow-2xl w-[170px] sm:w-[190px] md:w-[250px] lg:w-[400px]" alt="printer" width={400} height={400} />
               <Image src="/octogondark.png" draggable={false} className="block select-none dark:hidden drop-shadow-2xl w-[170px] sm:w-[190px] md:w-[250px] lg:w-[400px]" alt="printer" width={400} height={400} />
             </div>
           </div>
