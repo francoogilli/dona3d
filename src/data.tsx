@@ -1,3 +1,7 @@
+export const GalleryImagesData=[
+    
+]
+
 export const ServicesData = [
     {
         title:"Prototipado Rápido",
