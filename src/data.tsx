@@ -1,3 +1,22 @@
+export const ServicesData = [
+    {
+        title:"Prototipado Rápido",
+        description:"Utilizamos impresoras 3D FDM, que consiste en la deposición de plástico fundido para crear las piezas. Este método es relativamente más rápido que otros sistemas."
+    },
+    {
+        title:"Impresión 3D Online",
+        description:"Puedes enviarnos tu modelo 3D y nosotros nos encargamos de fabricarlo con nuestro equipo de impresión 3D. Desde prototipos hasta piezas personalizadas."
+    },
+    {
+        title:"Diseño 3D",
+        description:"Nos encargamos de llevar tu idea a un modelo 3D. Una vez finalizado el diseño, utilizamos tecnología de vanguardia para imprimir tus creaciones con la más alta calidad."
+    },
+    {
+        title:"Post-Procesado",
+        description:"Siempre se realiza un trabajo de limpieza de la pieza luego de la impresión y cuando es necesario, también realizamos el trabajo de pintura de la misma."
+    }
+]
+
 export const FAQs = [
     {
         ask:"¿Cuánto tiempo lleva hacer un pedido?",
