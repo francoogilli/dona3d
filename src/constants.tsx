@@ -25,8 +25,8 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     icon: <Icon icon="lucide:settings" width="24" height="24" />,
   },
   {
-    title: 'FAQ',
-    path: '/info',
+    title: 'Contacto',
+    path: '/contact',
     icon: <Icon icon="lucide:help-circle" width="24" height="24" />,
   },
 ];
