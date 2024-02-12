@@ -17,7 +17,7 @@ export default function Gallery() {
             </div>
             <h1 className="mt-8 mb-4 text-3xl font-bold uppercase tracking-widest">Dona 3D</h1>
             <p className="max-w-[40ch] text-black/85 dark:text-white/75 sm:max-w-[32ch]">Explore nuestra galería de impresiones 3D y descubra la variedad de modelos y diseños que hemos creado.</p>
-            <a href="" className="pointer z-10 mt-6 text-white rounded-lg border border-white bg-black dark:bg-white px-3 py-2 text-sm font-semibold dark:text-black transition  md:mt-4">Contactar</a>
+            <a href="" className="pointer z-10 mt-6 text-white rounded-lg border border-black dark:border-white bg-black dark:bg-white px-3 py-2 text-sm font-semibold dark:text-black transition  md:mt-4">Contactar</a>
           </div>
           <a href="" className="after:content group relative cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
             <Image src="/wa.png" className="rounded-lg" alt="hola" width={500} height={500}/>
