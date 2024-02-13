@@ -70,7 +70,7 @@ export default function Gallery() {
 
       {/* Modal para mostrar la imagen seleccionada */}
       {selectedImage && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div className="fixed top-0 left-0 w-full h-full bg-black backdrop-blur-xl bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg">
             <button
               className="absolute rounded-full bg-black/50 p-2 m-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
