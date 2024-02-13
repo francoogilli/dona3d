@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Printer from "src/components/visual/printer";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -15,6 +15,21 @@ export default function Gallery() {
   const closeModal = () => {
     setSelectedImage(null);
   };
+
+  useEffect(() => {
+    if (selectedImage) {
+      // Cuando se abre el modal, deshabilita el scroll del body
+      document.body.style.overflow = "hidden";
+    } else {
+      // Cuando se cierra el modal, habilita el scroll del body
+      document.body.style.overflow = "auto";
+    }
+
+    // Limpia el efecto cuando el componente se desmonta
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [selectedImage]);
 
   return (
     <>
@@ -65,7 +80,7 @@ export default function Gallery() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <Image src={selectedImage} className="rounded-lg h-full" alt="Large Image" width={1400} height={1400} />
+            <Image src={selectedImage} className="rounded-lg h-full" alt="Large Image" width={1300} height={1300} />
           </div>
         </div>
       )}
