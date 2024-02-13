@@ -45,26 +45,26 @@ export default function Gallery() {
           <p className="max-w-[40ch] text-black/85 dark:text-white/75 sm:max-w-[32ch]">Explore nuestra galería de impresiones 3D. Por consultas sobre estos modelos, no dude en contactarnos.</p>
           <a href="" className="pointer z-10 mt-6 text-white rounded-lg border border-black dark:border-white bg-black dark:bg-white px-3 py-2 text-sm font-semibold dark:text-black transition  md:mt-4">Contactar</a>
         </div>
-        <div onClick={() => openModal("/wa.png")} className="after:content group relative cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
-          <Image src="/wa.png" className="rounded-lg" alt="hola" width={500} height={500} />
+        <div onClick={() => openModal("/frio.png")} className="after:content group relative cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
+          <Image src="/frio.png" className="rounded-lg" alt="hola" width={500} height={500} />
         </div>
-        <div onClick={() => openModal("/wa.png")} className="after:content group relative cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
-          <Image src="/wa.png" className="rounded-lg" alt="hola" width={500} height={500} />
+        <div onClick={() => openModal("/playa.png")} className="after:content group relative cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
+          <Image src="/playa.png" className="rounded-lg" alt="hola" width={500} height={500} />
         </div>
-        <div onClick={() => openModal("/wa.png")} className="after:content group relative cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
-          <Image src="/wa.png" className="rounded-lg" alt="hola" width={500} height={500} />
+        <div onClick={() => openModal("/helado.png")} className="after:content group relative cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
+          <Image src="/helado.png" className="rounded-lg" alt="hola" width={500} height={500} />
         </div>
-        <div onClick={() => openModal("/wa.png")} className="after:content group relative cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
-          <Image src="/wa.png" className="rounded-lg" alt="hola" width={500} height={500} />
+        <div onClick={() => openModal("/idea.png")} className="after:content group relative cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
+          <Image src="/idea.png" className="rounded-lg" alt="hola" width={500} height={500} />
         </div>
-        <div onClick={() => openModal("/wa.png")} className="after:content group relative cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
-          <Image src="/wa.png" className="rounded-lg" alt="hola" width={500} height={500} />
+        <div onClick={() => openModal("/tailandia.png")} className="after:content group relative cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
+          <Image src="/tailandia.png" className="rounded-lg" alt="hola" width={500} height={500} />
         </div>
         <div  onClick={() => openModal("/wa.png")} className="after:content group relative cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
           <Image src="/wa.png" className="rounded-lg" alt="hola" width={500} height={500} />
         </div>
-        <div onClick={() => openModal("/wa.png")} className="after:content group relative cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
-          <Image src="/wa.png" className="rounded-lg" alt="hola" width={500} height={500} />
+        <div onClick={() => openModal("/nature.png")} className="after:content group relative cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
+          <Image src="/nature.png" className="rounded-lg" alt="hola" width={500} height={500} />
         </div>
       </div>
 
