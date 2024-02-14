@@ -7,6 +7,7 @@ import Robot from "./components/visual/robot";
 import Printer from "./components/visual/printer";
 import Computer from "./components/visual/computer";
 import Car3D from "./components/visual/car3d";
+import Clean from "./components/visual/clean";
 
 export interface Service {
   title: string;
@@ -35,7 +36,7 @@ export const ServicesData: Service[] = [
     {
         title:"Post-Procesado",
         description:"Siempre se realiza un trabajo de limpieza de la pieza luego de la impresión y cuando es necesario, también realizamos el trabajo de pintura de la misma.",
-        icon:<Printer/>,
+        icon:<Clean/>,
 
     }
 ]
