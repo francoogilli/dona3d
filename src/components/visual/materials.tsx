@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { MaterialsData } from "src/data"
+import { Icon } from "@iconify/react"
 export default function Materials() {
     return(
         <div className="flex flex-col items-center pb-28">
@@ -16,7 +17,11 @@ export default function Materials() {
                     ))
                 }
             </div>
+            <a href="/materials" className="flex justify-center items-center mt-10 font-semibold text-black dark:text-white from-black/5 to-black/10 dark:from-white/10 dark:to-white/5 bg-gradient-to-bl rounded-full px-4 py-2 sm:w-auto hover:bg-opacity-70 hover:scale-105 transition duration-300 ease-in-out">
+                Ver más<Icon icon="mingcute:right-fill" className="ml-2" />
+            </a>
 
+            
         </div>
     )
 }
