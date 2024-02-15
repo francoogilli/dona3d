@@ -7,7 +7,7 @@ export default function FAQ(){
             {FAQs.map((faq, index) => (
             <div key={index}>
                 <h2 className="font-semibold text-lg pb-3">{faq.ask}</h2>
-                <p className="text-zinc-400">{faq.answer}</p>
+                <p className="text-zinc-700 dark:text-zinc-400">{faq.answer}</p>
             </div>
             ))}            
         </div>
