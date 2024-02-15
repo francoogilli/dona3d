@@ -1,7 +1,7 @@
 import Image from "next/image"
 export default function Materials() {
     return(
-        <div className="flex flex-col items-center pb-20">
+        <div className="flex flex-col items-center pb-28">
             <h2 className="font-bold text-center text-2xl pb-14 sm:text-5xl">Trabajamos multiples materiales</h2>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-5">
                 <div className="flex flex-col items-center">
