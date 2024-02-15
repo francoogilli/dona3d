@@ -4,7 +4,6 @@ export const GalleryImagesData=[
 
 import { ReactNode } from "react";
 import Robot from "./components/visual/robot";
-import Printer from "./components/visual/printer";
 import Computer from "./components/visual/computer";
 import Car3D from "./components/visual/car3d";
 import Clean from "./components/visual/clean";
@@ -45,18 +44,127 @@ export const MaterialsData  = [
     {
         title:"PLA",
         image:"rollo.png",
+        characters:[
+            {
+                title:"Fácil de manipular"
+            },
+            {
+                title:"Alta definición"
+            },
+            {
+                title:"Costo bajo"
+            },
+            {
+                title:"Rígido"
+            },
+            {
+                title:"Menos resistente a fuerzas y temperatura."
+            }
+        ],
+        perfectFor:[
+            {
+                title:"Decoración"
+            },
+            {
+                title:"Controlar medidas"
+            },
+            {
+                title:"Accesorios"
+            },
+            {
+                title:"Prototipos"
+            }
+        ]
     },
     {
         title:"PET-G",
         image:"rollo2.png",
+        characters:[
+            {
+                title:"Fácil de manipular"
+            },
+            {
+                title:"Alta definición"
+            },
+            {
+                title:"Costo Medio"
+            },
+            {
+                title:"Rígido"
+            },
+            {
+                title:"Resistente a fuerzas y temperatura"
+            }
+        ],
+        perfectFor:[
+            {
+                title:"Prototipos funcionales"
+            },
+            {
+                title:"Piezas de máquinas"
+            },
+            {
+                title:"Accesorios"
+            }
+        ]
     },
     {
         title:"FLEX",
         image:"rollo3.png",
+        characters:[
+            {
+                title:"Manipuleo medio"
+            },
+            {
+                title:"Alta definición"
+            },
+            {
+                title:"Costo Alto"
+            },
+            {
+                title:"Flexible"
+            },
+            {
+                title:"No resiste altas temperaturas"
+            }
+        ],
+        perfectFor:[
+            {
+                title:"Piezas flexibles"
+            },
+            {
+                title:"Piezas semi-flexibles"
+            }
+        ]
     },
     {
         title:"ABS",
         image:"rollo4.png",
+        characters:[
+            {
+                title:"Dificil manipuleo"
+            },
+            {
+                title:"Definicion media"
+            },
+            {
+                title:"Costo medio-alto"
+            },
+            {
+                title:"Rígido"
+            },
+            {
+                title:"Resistente a fuerzas y temperatura"
+            }
+        ],
+        perfectFor:[
+            {
+                title:"Piezas de máquinas"
+            },
+            {
+                title:"Piezas resistentes"
+            }
+        ]
     }
 ]
 
