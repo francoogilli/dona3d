@@ -41,6 +41,25 @@ export const ServicesData: Service[] = [
     }
 ]
 
+export const MaterialsData  = [
+    {
+        title:"PLA",
+        image:"rollo.png",
+    },
+    {
+        title:"PET-G",
+        image:"rollo2.png",
+    },
+    {
+        title:"FLEX",
+        image:"rollo3.png",
+    },
+    {
+        title:"ABS",
+        image:"rollo4.png",
+    }
+]
+
 export const FAQs = [
     {
         ask:"¿Cuánto tiempo lleva hacer un pedido?",
