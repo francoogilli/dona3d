@@ -21,7 +21,7 @@ const Header = () => {
               <a
                 key={item.title}
                 href={item.path}
-                className="text-sm font-semibold text-gray-800 dark:text-zinc-200 transition-colors duration-200 hover:text-gray-800 dark:hover:text-gray-200">
+                className="text-sm font-semibold text-gray-800 dark:text-zinc-200 dark:hover:text-white transition-colors duration-200 hover:text-black ">
                 {item.title}
                 </a>
             ))}
