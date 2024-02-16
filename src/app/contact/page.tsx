@@ -11,7 +11,7 @@ export default function Contact() {
           </p>
         </div>
         <div className="space-y-4">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid sm:grid-cols-2 grid-cols-1 gap-4">
             <div className="space-y-2 flex flex-col justify-start">
               <label className="font-medium" htmlFor="first-name">Nombre</label>
               <input type="text" id="first-name" className="px-4 py-3 text-sm placeholder:text-black dark:placeholder:text-zinc-200 sm:bg-white/50 bg-white/30 border border-zinc-300 dark:border-neutral-900 sm:dark:bg-black/70 dark:bg-black/30 rounded-xl " placeholder="Ingrese su nombre" />
