@@ -190,8 +190,8 @@ export const FAQs = [
 export const FeaturesGridData = [
     {
         icon:"material-symbols:work",
-        title:"+4 Años",
-        description:"Con una trayectoria de más de 4 años en el campo del diseño e impresión 3D, consolidado nuestra experiencia."
+        title:"+5 Años",
+        description:"Con una trayectoria de más de 5 años en el campo del diseño e impresión 3D, consolidado nuestra experiencia."
     },
     {
         icon:"lucide:merge",
@@ -215,7 +215,7 @@ export const FeaturesGridData = [
     },
     {
         icon:"mdi:printer-3d-nozzle",
-        title:"4 impresoras 3D",
+        title:"5 impresoras 3D",
         description:"Contamos con cuatro impresoras 3D de vanguardia para atender tus necesidades con eficacia."
     }
 ]
