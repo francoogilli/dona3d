@@ -1,6 +1,45 @@
 "use client";
 import { Icon } from "@iconify/react"
+import { useState } from 'react';
+
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+  
+
+  const handleSumbit = async () => {
+    try {
+      const res = await fetch('/api/send', {
+        method: 'POST',
+        body: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      const data = await res.json();
+      console.log(data);
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        message: ''});
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
+  };
+
   return (
     <div className="grid grid-cols-1 rounded-2xl pt-20 md:grid-cols-2 items-start gap-14 px-4">
       <div className="space-y-8">
@@ -14,22 +53,48 @@ export default function Contact() {
           <div className="grid sm:grid-cols-2 grid-cols-1 gap-4">
             <div className="space-y-2 flex flex-col justify-start">
               <label className="font-medium" htmlFor="first-name">Nombre</label>
-              <input type="text" id="first-name" className="px-4 py-3 text-sm placeholder:text-black dark:placeholder:text-zinc-200 sm:bg-white/50 bg-white/30 border border-zinc-300 dark:border-neutral-900 sm:dark:bg-black/70 dark:bg-black/30 rounded-xl " placeholder="Ingrese su nombre" />
+              <input 
+                type="text" 
+                id="first-name"
+                name="firstName"
+                value={formData.firstName} // Asociar con el estado formData
+                onChange={handleChange} // Manejar cambios en el estado formData 
+                className="px-4 py-3 text-sm placeholder:text-black dark:placeholder:text-zinc-200 sm:bg-white/50 bg-white/30 border border-zinc-300 dark:border-neutral-900 sm:dark:bg-black/70 dark:bg-black/30 rounded-xl " placeholder="Ingrese su nombre" />
             </div>
             <div className="space-y-2 flex flex-col justify-start">
               <label className="font-medium" htmlFor="last-name">Apellido</label>
-              <input type="text" id="last-name" className="px-4 py-3 text-sm placeholder:text-black dark:placeholder:text-zinc-200 sm:bg-white/50 bg-white/30 border border-zinc-300 dark:border-neutral-900 sm:dark:bg-black/70 dark:bg-black/30 rounded-xl" placeholder="Ingrese su apellido" />
+              <input 
+              type="text" 
+              id="last-name" 
+              name="lastName"
+              value={formData.lastName} // Asociar con el estado formData
+              onChange={handleChange} // Manejar cambios en el estado formData
+              className="px-4 py-3 text-sm placeholder:text-black dark:placeholder:text-zinc-200 sm:bg-white/50 bg-white/30 border border-zinc-300 dark:border-neutral-900 sm:dark:bg-black/70 dark:bg-black/30 rounded-xl" placeholder="Ingrese su apellido" />
             </div>
           </div>
           <div className="space-y-2 flex flex-col justify-start">
             <label className="font-medium" htmlFor="email">Email</label>
-            <input type="text" id="email" className="px-4 py-3 text-sm placeholder:text-black dark:placeholder:text-zinc-200 sm:bg-white/50 bg-white/30 border border-zinc-300 dark:border-neutral-900 sm:dark:bg-black/70 dark:bg-black/30 rounded-xl" placeholder="Ingrese su correo" />
+            <input 
+            type="text" 
+            id="email" 
+            name="email"
+            value={formData.email} // Asociar con el estado formData
+            onChange={handleChange} // Manejar cambios en el estado formData
+            className="px-4 py-3 text-sm placeholder:text-black dark:placeholder:text-zinc-200 sm:bg-white/50 bg-white/30 border border-zinc-300 dark:border-neutral-900 sm:dark:bg-black/70 dark:bg-black/30 rounded-xl" placeholder="Ingrese su correo" />
           </div>
           <div className="space-y-2 flex flex-col justify-start">
             <label className="font-medium" htmlFor="message"> Mensaje</label>
-            <textarea id="message" rows={4} className="px-4 py-3 text-sm placeholder:text-black dark:placeholder:text-zinc-200 sm:bg-white/50 bg-white/30 border border-zinc-300 dark:border-neutral-900 sm:dark:bg-black/70 dark:bg-black/30 rounded-xl resize-none" placeholder="Escriba su mensaje"></textarea>
+            <textarea 
+            id="message" 
+            rows={4} 
+            name="message"
+            value={formData.message} // Asociar con el estado formData
+            onChange={handleChange} // Manejar cambios en el estado formData
+            className="px-4 py-3 text-sm placeholder:text-black dark:placeholder:text-zinc-200 sm:bg-white/50 bg-white/30 border border-zinc-300 dark:border-neutral-900 sm:dark:bg-black/70 dark:bg-black/30 rounded-xl resize-none" placeholder="Escriba su mensaje"></textarea>
           </div>
-          <button className="w-full  font-semibold from-green-600 to-green-400 bg-gradient-to-br hover:from-green-600 hover:to-green-600 text-white p-3 rounded-xl">Enviar mensaje</button>
+          <button className="w-full  font-semibold from-green-600 to-green-400 bg-gradient-to-br hover:from-green-600 hover:to-green-600 text-white p-3 rounded-xl" 
+          onClick={handleSumbit}>
+            Enviar mensaje</button>
 
         </div>
       </div>
