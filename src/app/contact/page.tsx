@@ -9,6 +9,7 @@ export default function Contact() {
     email: '',
     message: ''
   });
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -35,6 +36,7 @@ export default function Contact() {
         lastName: '',
         email: '',
         message: ''});
+      setIsSuccess(true);
     } catch (error) {
       console.error('Error submitting form:', error);
     }
@@ -49,6 +51,12 @@ export default function Contact() {
           ¡Estamos aquí para ayudarte! Completa el siguiente formulario y te contactaremos lo antes posible.
           </p>
         </div>
+        {isSuccess && ( // Mostrar el mensaje de éxito si isSuccess es verdadero
+          <div className="flex xl:flex-row flex-col justify-center items-center bg-green-100 dark:bg-green-950 border border-green-400 dark:border-green-700 text-green-700 dark:text-green-200 px-4 space-x-3 py-3 rounded-xl relative" role="alert">
+            <strong className="font-bold">¡Correo enviado con éxito!</strong>
+            <span className="block sm:inline">Muchas gracias por contactarnos.</span>
+          </div>
+        )}
         <div className="space-y-4">
           <div className="grid sm:grid-cols-2 grid-cols-1 gap-4">
             <div className="space-y-2 flex flex-col justify-start">
