@@ -12,7 +12,7 @@ export async function POST(request: NextRequest) {
       // Luego puedes enviar el correo electrónico con los datos del formulario
       const data = await resend.emails.send({
         from: 'Acme <onboarding@resend.dev>',
-        to: ['francogilli10@gmail.com'],
+        to: ['rafaeldona3d@gmail.com'],
         subject: 'Email para Dona 3D',
         react: <EmailTemplate firstName={firstName} lastName={lastName} email={email} message={message} />,
         text: 'Hola desde Resend y Next.js',
