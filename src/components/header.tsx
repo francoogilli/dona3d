@@ -10,8 +10,7 @@ const Header = () => {
         <div className="sticky inset-x-0 backdrop-blur-2xl top-0 z-30 w-full transition-all " id="header-nav">
       <div className="flex h-[57px] mx-auto lg:w-10/12 items-center justify-between px-4">
         <div className="flex items-center gap-x-3 justify-center">
-        <div className="border border-dashed size-7 rounded-lg bg-zinc-100 dark:bg-zinc-800 border-black dark:border-white">     
-        </div>
+        
         <span className="font-bold text-xl">Dona 3D</span>
         </div>
         
