@@ -10,6 +10,7 @@ export default function Contact() {
     message: ''
   });
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -21,6 +22,7 @@ export default function Contact() {
   
 
   const handleSumbit = async () => {
+    setIsLoading(true);
     try {
       const res = await fetch('/api/send', {
         method: 'POST',
@@ -40,6 +42,7 @@ export default function Contact() {
     } catch (error) {
       console.error('Error submitting form:', error);
     }
+    setIsLoading(false);
   };
 
   return (
@@ -51,6 +54,12 @@ export default function Contact() {
           ¡Estamos aquí para ayudarte! Completa el siguiente formulario y te contactaremos lo antes posible.
           </p>
         </div>
+        {isLoading && (// Mostrar el indicador de carga si isLoading es verdadero
+          <div className="flex items-center justify-center space-x-3 ">
+            <span className="animate-spin rounded-full size-7 border-t-2 border-b-2 border-green-700 dark:border-green-500 "></span>
+            <span className="text-base font-medium text-green-800 dark:text-green-300">Su mensaje se esta enviando...</span>
+          </div>
+        )}
         {isSuccess && ( // Mostrar el mensaje de éxito si isSuccess es verdadero
           <div className="flex xl:flex-row flex-col justify-center items-center bg-green-100 dark:bg-green-950 border border-green-400 dark:border-green-700 text-green-700 dark:text-green-200 px-4 space-x-3 py-3 rounded-xl relative" role="alert">
             <strong className="font-bold">¡Correo enviado con éxito!</strong>
