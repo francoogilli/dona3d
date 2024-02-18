@@ -15,7 +15,7 @@ export default function Gallery() {
         const promises = [];
         // Crear un array de promesas para obtener las URLs de las imágenes
         for (let i = 1; i <= 10; i++) {
-          promises.push(getDownloadURL(ref(storage, `imagenes/${i}.jpg`)));
+          promises.push(getDownloadURL(ref(storage, `imagenes/${i}.webp`)));
         }
         // Esperar a que todas las promesas se resuelvan
         const urls = await Promise.all(promises);
