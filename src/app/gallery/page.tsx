@@ -79,7 +79,7 @@ export default function Gallery() {
       {/* Modal para mostrar la imagen seleccionada */}
       {selectedImage && (
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50">
-          <div className="bg-black bg-opacity-50 absolute inset-0" onClick={closeModal}></div>
+          <div className="bg-black bg-opacity-50 backdrop-blur-lg absolute inset-0" onClick={closeModal}></div>
           <div className="bg-white rounded-lg overflow-hidden z-10 max-w-3xl max-h-3xl">
             <button
               className="absolute top-2 right-2 rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
