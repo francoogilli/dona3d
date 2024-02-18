@@ -12,20 +12,22 @@ export default function Gallery() {
   useEffect(() => {
     const fetchImageUrls = async () => {
       try {
-        const urls = [];
-        // Obtener las URLs de las imágenes del 1 al 130
+        const promises = [];
+        // Crear un array de promesas para obtener las URLs de las imágenes
         for (let i = 1; i <= 10; i++) {
-          const url = await getDownloadURL(ref(storage, `imagenes/${i}.jpg`));
-          urls.push(url);
+          promises.push(getDownloadURL(ref(storage, `imagenes/${i}.jpg`)));
         }
+        // Esperar a que todas las promesas se resuelvan
+        const urls = await Promise.all(promises);
         setImageUrls(urls);
       } catch (error) {
         console.error("Error fetching image URLs:", error);
       }
     };
-
+  
     fetchImageUrls();
-  }, []);   // Ejecutar solo una vez al montar el componente
+  }, []);
+     // Ejecutar solo una vez al montar el componente
 
   // Función para abrir el modal con la imagen seleccionada
   const openModal = (imageUrl: string) => {
