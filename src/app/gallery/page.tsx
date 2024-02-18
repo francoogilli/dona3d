@@ -60,7 +60,7 @@ export default function Gallery() {
             <span className="flex max-h-full max-w-full items-center justify-center text-zinc-800 dark:text-zinc-400">
               <Printer />
             </span>
-            <span className="absolute left-0 right-0 bottom-0 h-[400px] sm:h-[340px] bg-gradient-to-b from-black/0 via-black to-black"></span>
+            <span className="absolute left-0 right-0 bottom-0 h-[400px] sm:h-[340px] bg-gradient-to-b from-white/5 via-white to-white dark:from-black/5 dark:via-black dark:to-black"></span>
           </div>
           <h1 className="mt-8 mb-4 text-3xl font-bold uppercase tracking-widest">Dona 3D</h1>
           <p className="max-w-[40ch] text-black/85 dark:text-white/75 sm:max-w-[32ch]">Explore nuestra galería de impresiones 3D. Por consultas sobre estos modelos, no dude en contactarnos.</p>
