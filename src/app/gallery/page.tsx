@@ -14,7 +14,7 @@ export default function Gallery() {
       try {
         const promises = [];
         // Crear un array de promesas para obtener las URLs de las imágenes
-        for (let i = 1; i <= 30; i++) {
+        for (let i = 1; i <= 71; i++) {
           promises.push(getDownloadURL(ref(storage, `imagenes/${i}.webp`)));
         }
         // Esperar a que todas las promesas se resuelvan
@@ -71,18 +71,20 @@ export default function Gallery() {
           </a>
         </div>
         {imageUrls.map((imageUrl, index) => (
-          <div key={index} onClick={() => openModal(imageUrl)} className="group relative cursor-pointer">
+          <div key={index} onClick={() => openModal(imageUrl)} className="group relative cursor-zoom-in">
             <Image
               src={imageUrl}
               className="rounded-lg"
               alt="Image"
               loading="lazy"
-              layout="responsive" // Agregar layout responsive
-              width={500} // Especificar el ancho de la imagen
-              height={500} // Especificar la altura de la imagen
+              objectFit="contain" 
+              width={500}
+              height={500}
+              
             />
           </div>
         ))}
+
         
       </div>
 
@@ -90,7 +92,7 @@ export default function Gallery() {
       {selectedImage && (
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50">
           <div className="bg-black bg-opacity-50 backdrop-blur-lg absolute inset-0" onClick={closeModal}></div>
-          <div className="bg-white rounded-lg overflow-hidden z-10 max-w-3xl max-h-3xl">
+          <div className="bg-white rounded-lg overflow-hidden z-10 max-w-3xl ">
             <button
               className="absolute top-2 right-2 rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
               onClick={closeModal}
@@ -99,7 +101,15 @@ export default function Gallery() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <Image src={selectedImage} className="rounded-lg" alt="Large Image" layout="responsive" width={1300} height={900} />
+            <Image 
+              src={selectedImage} 
+              className="rounded-lg" 
+              alt="Large Image" 
+              priority 
+              objectFit="contain" 
+              width={768} 
+              height={768} 
+            />
           </div>
         </div>
       )}
