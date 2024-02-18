@@ -1,10 +1,31 @@
 "use client";
 import Image from "next/image";
 import Printer from "src/components/visual/printer";
+import { storage } from "../../firebase/config"; // Ruta al archivo firebase.js
+import { getDownloadURL, ref } from "firebase/storage"; // Importar ref desde firebase/storage
 import { useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [imageUrls, setImageUrls] = useState<string[]>([]);
+
+  useEffect(() => {
+    const fetchImageUrls = async () => {
+      try {
+        const urls = [];
+        // Obtener las URLs de las imágenes del 1 al 130
+        for (let i = 1; i <= 10; i++) {
+          const url = await getDownloadURL(ref(storage, `imagenes/${i}.jpg`));
+          urls.push(url);
+        }
+        setImageUrls(urls);
+      } catch (error) {
+        console.error("Error fetching image URLs:", error);
+      }
+    };
+
+    fetchImageUrls();
+  }, []);   // Ejecutar solo una vez al montar el componente
 
   // Función para abrir el modal con la imagen seleccionada
   const openModal = (imageUrl: string) => {
@@ -34,7 +55,7 @@ export default function Gallery() {
   return (
     <>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3">
-        <div className="after:content relative col-span-1 row-span-3 flex flex-col items-center justify-end gap-4 overflow-hidden rounded-lg bg-black/5 dark:bg-white/5 px-6 pb-16 pt-64 text-center text-black dark:text-white shadow-highlight after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight sm:col-span-2 lg:col-span-1 lg:row-span-2 lg:pt-0">
+        <div className="after:content relative col-span-1 row-span-3 flex flex-col items-center justify-end gap-4 overflow-hidden rounded-lg bg-black/5 dark:bg-white/5 px-6 pb-16 sm:pb-6 pt-64 text-center text-black dark:text-white shadow-highlight after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight sm:col-span-2 lg:col-span-1 lg:row-span-1 lg:pt-0">
           <div className="absolute inset-0 flex items-center justify-center opacity-20">
             <span className="flex max-h-full max-w-full items-center justify-center text-zinc-800 dark:text-zinc-400">
               <Printer />
@@ -47,46 +68,31 @@ export default function Gallery() {
           <Icon icon="mingcute:right-fill" className="ml-2" />
           </a>
         </div>
-        <div onClick={() => openModal("/frio.png")} className="after:content group relative cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
-          <Image src="/frio.png" className="rounded-lg" alt="hola" width={500} height={500} />
-        </div>
-        <div onClick={() => openModal("/playa.png")} className="after:content group relative cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
-          <Image src="/playa.png" className="rounded-lg" alt="hola" width={500} height={500} />
-        </div>
-        <div onClick={() => openModal("/helado.png")} className="after:content group relative cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
-          <Image src="/helado.png" className="rounded-lg" alt="hola" width={500} height={500} />
-        </div>
-        <div onClick={() => openModal("/idea.png")} className="after:content group relative cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
-          <Image src="/idea.png" className="rounded-lg" alt="hola" width={500} height={500} />
-        </div>
-        <div onClick={() => openModal("/tailandia.png")} className="after:content group relative cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
-          <Image src="/tailandia.png" className="rounded-lg" alt="hola" width={500} height={500} />
-        </div>
-        <div  onClick={() => openModal("/wa.png")} className="after:content group relative cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
-          <Image src="/wa.png" className="rounded-lg" alt="hola" width={500} height={500} />
-        </div>
-        <div onClick={() => openModal("/nature.png")} className="after:content group relative cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
-          <Image src="/nature.png" className="rounded-lg" alt="hola" width={500} height={500} />
-        </div>
+        {imageUrls.map((imageUrl, index) => (
+          <div key={index} onClick={() => openModal(imageUrl)} className="group relative cursor-zoom-in">
+            <Image src={imageUrl} className="rounded-lg" alt="Image" loading="lazy" width={500} height={500} />
+          </div>
+        ))}
+        
       </div>
 
       {/* Modal para mostrar la imagen seleccionada */}
       {selectedImage && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black backdrop-blur-xl bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg">
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50">
+          <div className="bg-black bg-opacity-50 absolute inset-0" onClick={closeModal}></div>
+          <div className="bg-white rounded-lg overflow-hidden z-10 max-w-3xl max-h-3xl">
             <button
-              className="absolute rounded-full bg-black/50 p-2 m-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
+              className="absolute top-2 right-2 rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
               onClick={closeModal}
             >
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <Image src={selectedImage} className="rounded-lg h-full" alt="Large Image" width={1300} height={1300} />
+            <Image src={selectedImage} className="rounded-lg" alt="Large Image" layout="responsive" width={1300} height={900} />
           </div>
         </div>
       )}
     </>
   );
 }
-
