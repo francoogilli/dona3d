@@ -14,7 +14,7 @@ export default function Gallery() {
       try {
         const promises = [];
         // Crear un array de promesas para obtener las URLs de las imágenes
-        for (let i = 1; i <= 10; i++) {
+        for (let i = 1; i <= 30; i++) {
           promises.push(getDownloadURL(ref(storage, `imagenes/${i}.webp`)));
         }
         // Esperar a que todas las promesas se resuelvan
@@ -71,8 +71,16 @@ export default function Gallery() {
           </a>
         </div>
         {imageUrls.map((imageUrl, index) => (
-          <div key={index} onClick={() => openModal(imageUrl)} className="group relative cursor-zoom-in">
-            <Image src={imageUrl} className="rounded-lg" alt="Image" loading="lazy" width={500} height={500} />
+          <div key={index} onClick={() => openModal(imageUrl)} className="group relative cursor-pointer">
+            <Image
+              src={imageUrl}
+              className="rounded-lg"
+              alt="Image"
+              loading="lazy"
+              layout="responsive" // Agregar layout responsive
+              width={500} // Especificar el ancho de la imagen
+              height={500} // Especificar la altura de la imagen
+            />
           </div>
         ))}
         
