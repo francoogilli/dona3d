@@ -71,7 +71,7 @@ export default function Gallery() {
           </a>
         </div>
         {imageUrls.map((imageUrl, index) => (
-          <div key={index} onClick={() => openModal(imageUrl)} className="group relative cursor-zoom-in">
+          <div key={index} onClick={() => openModal(imageUrl)} className="group relative cursor-pointer">
             <Image
               src={imageUrl}
               className="rounded-lg"
