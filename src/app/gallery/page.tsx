@@ -116,9 +116,9 @@ export default function Gallery() {
       <button
   onClick={() => changePage(Math.max(currentPage - 1, 1))}
   disabled={currentPage === 1}
-  className={`px-3 py-1.5 bg-zinc-100 dark:bg-zinc-800 hover:bg-neutral-200 dark:hover:bg-zinc-700 rounded-l-2xl ${currentPage === 1 ? 'disabled:pointer-events-none' : ''}`}
+  className={`px-3 py-2.5 bg-zinc-100 dark:bg-zinc-800 hover:bg-neutral-200 dark:hover:bg-zinc-700 rounded-l-2xl ${currentPage === 1 ? 'disabled:pointer-events-none' : ''}`}
 >
-  <Icon icon="mingcute:left-line" className={`${currentPage === 1 ? 'dark:text-zinc-600 text-zinc-400' : ''}`} width={28} />
+  <Icon icon="mingcute:left-line" className={`${currentPage === 1 ? 'dark:text-zinc-600 text-zinc-400' : ''}`} width={20} />
 </button>
 
         <div className="bg-zinc-100 dark:bg-zinc-800">
@@ -138,9 +138,9 @@ export default function Gallery() {
         <button
           onClick={() => changePage(Math.min(currentPage + 1, totalPages))}
           disabled={currentPage === totalPages}
-          className={`px-3 py-1.5 bg-zinc-100 dark:bg-zinc-800 hover:bg-neutral-200 dark:hover:bg-zinc-700 rounded-r-2xl ${currentPage === totalPages ? 'disabled:pointer-events-none' : ''}`}
+          className={`px-3 py-2.5 bg-zinc-100 dark:bg-zinc-800 hover:bg-neutral-200 dark:hover:bg-zinc-700 rounded-r-2xl ${currentPage === totalPages ? 'disabled:pointer-events-none' : ''}`}
         >
-           <Icon icon="mingcute:right-line" className={`${currentPage === totalPages ? 'dark:text-zinc-600 text-zinc-400' : ''}`} width={28} />
+           <Icon icon="mingcute:right-line" className={`${currentPage === totalPages ? 'dark:text-zinc-600 text-zinc-400' : ''}`} width={20} />
         </button>
       </div>
 
