@@ -124,7 +124,7 @@ export default function Gallery() {
   <button
     key={i}
     onClick={() => changePage(pageNumber)}
-    className={`px-4 py-2 font-medium bg-zinc-100 dark:bg-[#27272A] hover:bg-[neutral-200] dark:hover:bg-[#3F3F46] rounded-xl ${currentPage === pageNumber ? 'bg-blue-600 dark:bg-blue-700 hover:bg-blue-700 dark:hover:bg-blue-600 text-white' : ''}`}
+    className={`px-4 py-2 font-medium bg-[zinc-100] dark:bg-[#27272A] hover:bg-[neutral-200] dark:hover:bg-[#3F3F46] rounded-xl ${currentPage === pageNumber ? 'bg-blue-600 dark:bg-blue-700 hover:bg-blue-700 dark:hover:bg-blue-600 text-white' : ''}`}
   >
     {pageNumber}
   </button>
