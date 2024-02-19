@@ -113,13 +113,14 @@ export default function Gallery() {
         ))}
       </div>
       <div className="flex items-center justify-center mt-10">
-        <button
-          onClick={() => changePage(Math.max(currentPage - 1, 1))}
-          disabled={currentPage === 1}
-          className={`px-3 py-2 bg-zinc-100 dark:bg-zinc-800 hover:bg-neutral-200 dark:hover:bg-zinc-700 rounded-l-2xl ${currentPage === 1 ? 'disabled:opacity-40' : ''}`}
-        >
-          <Icon icon="mingcute:left-line" className="" width={28} />
-        </button>
+      <button
+  onClick={() => changePage(Math.max(currentPage - 1, 1))}
+  disabled={currentPage === 1}
+  className={`px-3 py-2 bg-zinc-100 dark:bg-zinc-800 hover:bg-neutral-200 dark:hover:bg-zinc-700 rounded-l-2xl ${currentPage === 1 ? 'disabled:pointer-events-none' : ''}`}
+>
+  <Icon icon="mingcute:left-line" className={`${currentPage === 1 ? 'dark:text-zinc-600 text-zinc-400' : ''}`} width={28} />
+</button>
+
         <div className="bg-zinc-100 dark:bg-zinc-800">
         {pageNumbersToShow().map((pageNumber, i) => (
   <button
@@ -137,9 +138,9 @@ export default function Gallery() {
         <button
           onClick={() => changePage(Math.min(currentPage + 1, totalPages))}
           disabled={currentPage === totalPages}
-          className={`px-3 py-2 bg-zinc-100 dark:bg-zinc-800 hover:bg-neutral-200 dark:hover:bg-zinc-700 rounded-r-2xl ${currentPage === totalPages ? 'disabled:opacity-40' : ''}`}
+          className={`px-3 py-2 bg-zinc-100 dark:bg-zinc-800 hover:bg-neutral-200 dark:hover:bg-zinc-700 rounded-r-2xl ${currentPage === totalPages ? 'disabled:pointer-events-none' : ''}`}
         >
-           <Icon icon="mingcute:right-line" className="" width={28} />
+           <Icon icon="mingcute:right-line" className={`${currentPage === totalPages ? 'dark:text-zinc-600 text-zinc-400' : ''}`} width={28} />
         </button>
       </div>
 
