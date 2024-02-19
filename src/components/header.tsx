@@ -7,7 +7,7 @@ const Header = () => {
     
     
     return (
-        <div className="sticky inset-x-0 backdrop-blur-2xl top-0 z-30 w-full transition-all " id="header-nav">
+        <div className="sticky inset-x-0 backdrop-blur-lg bg-white/75 dark:bg-[#050505]/80 top-0 z-30 w-full transition-all " id="header-nav">
       <div className="flex h-[57px] mx-auto lg:w-10/12 items-center justify-between px-4">
         <div className="flex items-center gap-x-3 justify-center">
         
