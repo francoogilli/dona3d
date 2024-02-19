@@ -5,16 +5,19 @@ import { storage } from "../../firebase/config"; // Ruta al archivo firebase.js
 import { getDownloadURL, ref } from "firebase/storage"; // Importar ref desde firebase/storage
 import { useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
+
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [imageUrls, setImageUrls] = useState<string[]>([]);
+  const IMAGES_PER_PAGE = 17;
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     const fetchImageUrls = async () => {
       try {
         const promises = [];
         // Crear un array de promesas para obtener las URLs de las imágenes
-        for (let i = 1; i <= 71; i++) {
+        for (let i = 1; i <= 100; i++) {
           promises.push(getDownloadURL(ref(storage, `imagenes/${i}.webp`)));
         }
         // Esperar a que todas las promesas se resuelvan
@@ -27,7 +30,6 @@ export default function Gallery() {
   
     fetchImageUrls();
   }, []);
-     // Ejecutar solo una vez al montar el componente
 
   // Función para abrir el modal con la imagen seleccionada
   const openModal = (imageUrl: string) => {
@@ -54,6 +56,31 @@ export default function Gallery() {
     };
   }, [selectedImage]);
 
+  const totalPages = Math.ceil(imageUrls.length / IMAGES_PER_PAGE);
+  const changePage = (page: number) => {
+    setCurrentPage(page);
+  };
+
+  // Calcular el rango de números de página para mostrar
+  const pageNumbersToShow = () => {
+    const maxPagesToShow = 5;
+    const halfMaxPagesToShow = Math.floor(maxPagesToShow / 2);
+    let startPage = currentPage - halfMaxPagesToShow;
+    let endPage = currentPage + halfMaxPagesToShow;
+
+    // Ajustar el inicio y el final si están fuera de los límites
+    if (startPage < 1) {
+      startPage = 1;
+      endPage = maxPagesToShow;
+    }
+    if (endPage > totalPages) {
+      endPage = totalPages;
+      startPage = totalPages - maxPagesToShow + 1;
+    }
+
+    return Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i);
+  };
+
   return (
     <>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3">
@@ -70,7 +97,7 @@ export default function Gallery() {
           <Icon icon="mingcute:right-fill" className="ml-2" />
           </a>
         </div>
-        {imageUrls.map((imageUrl, index) => (
+        {imageUrls.slice((currentPage - 1) * IMAGES_PER_PAGE, currentPage * IMAGES_PER_PAGE).map((imageUrl, index) => (
           <div key={index} onClick={() => openModal(imageUrl)} className="group relative cursor-pointer">
             <Image
               src={imageUrl}
@@ -80,12 +107,36 @@ export default function Gallery() {
               objectFit="contain" 
               width={500}
               height={500}
-              
             />
           </div>
         ))}
-
-        
+      </div>
+      <div className="flex items-center justify-center mt-10">
+        <button
+          onClick={() => changePage(Math.max(currentPage - 1, 1))}
+          disabled={currentPage === 1}
+          className={`px-4 py-2 bg-zinc-100 dark:bg-zinc-800 hover:bg-neutral-200 dark:hover:bg-zinc-700 rounded-l-2xl ${currentPage === 1 ? 'disabled:opacity-40' : ''}`}
+        >
+          <Icon icon="mingcute:left-line" className="" width={24} />
+        </button>
+        <div className="bg-zinc-100 dark:bg-zinc-800">
+          {pageNumbersToShow().map((pageNumber, i) => (
+            <button
+              key={i}
+              onClick={() => changePage(pageNumber)}
+              className={`px-4 py-2 font-medium bg-zinc-100 dark:bg-[#27272A] hover:bg-neutral-200 dark:hover:bg-[#3F3F46] rounded-xl ${currentPage === pageNumber ? 'bg-[#0070F0] dark:bg-[#0070F0] hover:bg-blue-700 dark:hover:bg-blue-700 text-white' : ''}`}
+            >
+              {pageNumber}
+            </button>
+          ))}
+        </div>
+        <button
+          onClick={() => changePage(Math.min(currentPage + 1, totalPages))}
+          disabled={currentPage === totalPages}
+          className={`px-4 py-2 bg-zinc-100 dark:bg-zinc-800 hover:bg-neutral-200 dark:hover:bg-zinc-700 rounded-r-2xl ${currentPage === totalPages ? 'disabled:opacity-40' : ''}`}
+        >
+           <Icon icon="mingcute:right-line" className="" width={24} />
+        </button>
       </div>
 
       {/* Modal para mostrar la imagen seleccionada */}
