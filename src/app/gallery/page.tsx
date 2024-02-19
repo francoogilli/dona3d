@@ -115,16 +115,16 @@ export default function Gallery() {
         <button
           onClick={() => changePage(Math.max(currentPage - 1, 1))}
           disabled={currentPage === 1}
-          className={`px-4 py-2 bg-zinc-100 dark:bg-zinc-800 hover:bg-neutral-200 dark:hover:bg-zinc-700 rounded-l-2xl ${currentPage === 1 ? 'disabled:opacity-40' : ''}`}
+          className={`px-3 py-2 bg-zinc-100 dark:bg-zinc-800 hover:bg-neutral-200 dark:hover:bg-zinc-700 rounded-l-2xl ${currentPage === 1 ? 'disabled:opacity-40' : ''}`}
         >
-          <Icon icon="mingcute:left-line" className="" width={24} />
+          <Icon icon="mingcute:left-line" className="" width={28} />
         </button>
         <div className="bg-zinc-100 dark:bg-zinc-800">
         {pageNumbersToShow().map((pageNumber, i) => (
   <button
     key={i}
     onClick={() => changePage(pageNumber)}
-    className={`px-4 py-2 font-medium bg-[zinc-100] dark:bg-[#27272A] hover:bg-[neutral-200] dark:hover:bg-[#3F3F46] rounded-xl ${currentPage === pageNumber ? 'bg-blue-600 dark:bg-blue-700 hover:bg-blue-700 dark:hover:bg-blue-600 text-white' : ''}`}
+    className={`px-4 py-2 text-lg font-medium bg-[zinc-100] dark:bg-[#27272A] hover:bg-[neutral-200] dark:hover:bg-[#3F3F46] rounded-xl ${currentPage === pageNumber ? 'bg-blue-600 dark:bg-blue-700 hover:bg-blue-700 dark:hover:bg-blue-600 text-white' : ''}`}
   >
     {pageNumber}
   </button>
@@ -134,9 +134,9 @@ export default function Gallery() {
         <button
           onClick={() => changePage(Math.min(currentPage + 1, totalPages))}
           disabled={currentPage === totalPages}
-          className={`px-4 py-2 bg-zinc-100 dark:bg-zinc-800 hover:bg-neutral-200 dark:hover:bg-zinc-700 rounded-r-2xl ${currentPage === totalPages ? 'disabled:opacity-40' : ''}`}
+          className={`px-3 py-2 bg-zinc-100 dark:bg-zinc-800 hover:bg-neutral-200 dark:hover:bg-zinc-700 rounded-r-2xl ${currentPage === totalPages ? 'disabled:opacity-40' : ''}`}
         >
-           <Icon icon="mingcute:right-line" className="" width={24} />
+           <Icon icon="mingcute:right-line" className="" width={28} />
         </button>
       </div>
 
