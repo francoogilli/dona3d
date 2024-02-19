@@ -58,6 +58,7 @@ export default function Gallery() {
 
   const totalPages = Math.ceil(imageUrls.length / IMAGES_PER_PAGE);
   const changePage = (page: number) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     setCurrentPage(page);
   };
 
