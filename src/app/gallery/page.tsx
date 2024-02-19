@@ -116,7 +116,7 @@ export default function Gallery() {
       <button
   onClick={() => changePage(Math.max(currentPage - 1, 1))}
   disabled={currentPage === 1}
-  className={`px-3 py-2 bg-zinc-100 dark:bg-zinc-800 hover:bg-neutral-200 dark:hover:bg-zinc-700 rounded-l-2xl ${currentPage === 1 ? 'disabled:pointer-events-none' : ''}`}
+  className={`px-3 py-1.5 bg-zinc-100 dark:bg-zinc-800 hover:bg-neutral-200 dark:hover:bg-zinc-700 rounded-l-2xl ${currentPage === 1 ? 'disabled:pointer-events-none' : ''}`}
 >
   <Icon icon="mingcute:left-line" className={`${currentPage === 1 ? 'dark:text-zinc-600 text-zinc-400' : ''}`} width={28} />
 </button>
@@ -126,7 +126,7 @@ export default function Gallery() {
   <button
     key={i}
     onClick={() => changePage(pageNumber)}
-    className={`px-4 py-2 text-lg font-medium bg-[zinc-100] dark:bg-[#27272A] hover:bg-[neutral-200] dark:hover:bg-[#3F3F46] rounded-xl relative ${currentPage === pageNumber ? 'bg-blue-500 dark:bg-blue-600 hover:bg-blue-600 dark:hover:bg-blue-700 text-white' : ''}`}
+    className={`px-4 py-1.5 text-lg font-medium bg-[zinc-100] dark:bg-[#27272A] hover:bg-[neutral-200] dark:hover:bg-[#3F3F46] rounded-xl relative ${currentPage === pageNumber ? 'bg-blue-500 dark:bg-blue-600 hover:bg-blue-600 dark:hover:bg-blue-700 text-white' : ''}`}
   >
     {pageNumber}
     {currentPage === pageNumber && <div className="absolute inset-0 shadow-blue rounded-xl" aria-hidden="true"></div>}
@@ -138,7 +138,7 @@ export default function Gallery() {
         <button
           onClick={() => changePage(Math.min(currentPage + 1, totalPages))}
           disabled={currentPage === totalPages}
-          className={`px-3 py-2 bg-zinc-100 dark:bg-zinc-800 hover:bg-neutral-200 dark:hover:bg-zinc-700 rounded-r-2xl ${currentPage === totalPages ? 'disabled:pointer-events-none' : ''}`}
+          className={`px-3 py-1.5 bg-zinc-100 dark:bg-zinc-800 hover:bg-neutral-200 dark:hover:bg-zinc-700 rounded-r-2xl ${currentPage === totalPages ? 'disabled:pointer-events-none' : ''}`}
         >
            <Icon icon="mingcute:right-line" className={`${currentPage === totalPages ? 'dark:text-zinc-600 text-zinc-400' : ''}`} width={28} />
         </button>
