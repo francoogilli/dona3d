@@ -64,6 +64,11 @@ body {
   animation-timeline: scroll();
   animation-range: 0 500px;
 }
+.shadow-blue {
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); 
+  z-index: 1;
+}
+
 
 
 @keyframes blur {
