@@ -120,15 +120,16 @@ export default function Gallery() {
           <Icon icon="mingcute:left-line" className="" width={24} />
         </button>
         <div className="bg-zinc-100 dark:bg-zinc-800">
-          {pageNumbersToShow().map((pageNumber, i) => (
-            <button
-              key={i}
-              onClick={() => changePage(pageNumber)}
-              className={`px-4 py-2 font-medium bg-zinc-100 dark:bg-[#27272A] hover:bg-neutral-200 dark:hover:bg-[#3F3F46] rounded-xl ${currentPage === pageNumber ? 'bg-[#0070F0] dark:bg-[#0070F0] hover:bg-blue-700 dark:hover:bg-blue-700 text-white' : ''}`}
-            >
-              {pageNumber}
-            </button>
-          ))}
+        {pageNumbersToShow().map((pageNumber, i) => (
+  <button
+    key={i}
+    onClick={() => changePage(pageNumber)}
+    className={`px-4 py-2 font-medium bg-zinc-100 dark:bg-[#27272A] hover:bg-[neutral-200] dark:hover:bg-[#3F3F46] rounded-xl ${currentPage === pageNumber ? 'bg-blue-600 dark:bg-blue-700 hover:bg-blue-700 dark:hover:bg-blue-600 text-white' : ''}`}
+  >
+    {pageNumber}
+  </button>
+))}
+
         </div>
         <button
           onClick={() => changePage(Math.min(currentPage + 1, totalPages))}
