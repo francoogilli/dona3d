@@ -148,7 +148,8 @@ export default function Gallery() {
       {selectedImage && (
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50">
           <div className="bg-black bg-opacity-50 backdrop-blur-lg absolute inset-0" onClick={closeModal}></div>
-          <div className="bg-white/50 dark:bg-black/70 backdrop-blur-xl rounded-lg overflow-hidden z-10 max-w-3xl ">
+          <div className=" bg-white/40 flex justify-center items-center dark:bg-black/70 backdrop-blur-xl rounded-lg overflow-hidden z-10 max-w-3xl ">
+            <div className="animate-spin rounded-full fixed -z-10 sm:size-32 size-24  border-b-2 border-blue-700 dark:border-blue-500"></div>
             <button
               className="absolute top-2 right-2 rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
               onClick={closeModal}
