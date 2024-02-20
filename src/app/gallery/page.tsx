@@ -17,7 +17,7 @@ export default function Gallery() {
       try {
         const promises = [];
         
-        for (let i = 1; i <= 180; i++) {
+        for (let i = 1; i <= 254; i++) {
           promises.push(getDownloadURL(ref(storage, `imagenes/${i}.webp`)));
         }
         // Esperar a que todas las promesas se resuelvan
