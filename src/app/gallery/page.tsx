@@ -9,15 +9,15 @@ import { Icon } from "@iconify/react";
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [imageUrls, setImageUrls] = useState<string[]>([]);
-  const IMAGES_PER_PAGE = 17;
+  const IMAGES_PER_PAGE = 20;
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     const fetchImageUrls = async () => {
       try {
         const promises = [];
-        // Crear un array de promesas para obtener las URLs de las imágenes
-        for (let i = 1; i <= 100; i++) {
+        
+        for (let i = 1; i <= 180; i++) {
           promises.push(getDownloadURL(ref(storage, `imagenes/${i}.webp`)));
         }
         // Esperar a que todas las promesas se resuelvan
