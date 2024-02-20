@@ -112,7 +112,7 @@ export default function Gallery() {
           </div>
         ))}
       </div>
-      <div className="flex items-center justify-center mt-10">
+      <div className="flex items-center justify-center mt-20">
       <button
   onClick={() => changePage(Math.max(currentPage - 1, 1))}
   disabled={currentPage === 1}
