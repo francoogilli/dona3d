@@ -11,6 +11,7 @@ export default function Gallery() {
   const [imageUrls, setImageUrls] = useState<string[]>([]);
   const IMAGES_PER_PAGE = 20;
   const [currentPage, setCurrentPage] = useState(1);
+  const [isLoadingAnimationShown, setIsLoadingAnimationShown] = useState(false);
 
   useEffect(() => {
     const fetchImageUrls = async () => {
@@ -34,6 +35,9 @@ export default function Gallery() {
   // Función para abrir el modal con la imagen seleccionada
   const openModal = (imageUrl: string) => {
     setSelectedImage(imageUrl);
+    if (!isLoadingAnimationShown) {
+      setIsLoadingAnimationShown(true); // Cambiar el estado cuando se muestra por primera vez
+    }
   };
 
   // Función para cerrar el modal
@@ -149,7 +153,9 @@ export default function Gallery() {
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50">
           <div className="bg-black bg-opacity-50 backdrop-blur-lg absolute inset-0" onClick={closeModal}></div>
           <div className=" bg-white/40 flex justify-center items-center dark:bg-black/70 backdrop-blur-xl rounded-lg overflow-hidden z-10 max-w-3xl ">
-            <div className="animate-spin rounded-full fixed -z-10 sm:size-32 size-24  border-b-2 border-blue-700 dark:border-blue-500"></div>
+          {isLoadingAnimationShown && (
+          <div className="animate-spin rounded-full fixed -z-10 sm:size-32 size-24  border-b-2 border-blue-700 dark:border-blue-500"></div>
+        )}
             <button
               className="absolute top-2 right-2 rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
               onClick={closeModal}
