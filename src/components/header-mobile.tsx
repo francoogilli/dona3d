@@ -134,7 +134,7 @@ const MenuItem = ({
   children?: ReactNode;
 }) => {
   return (
-    <motion.li variants={MenuItemVariants} className={className} role="menuitem" >
+    <motion.li variants={MenuItemVariants} aria-label='Toggle Menu' className={className} role="menuitem" >
       {children}
     </motion.li>
   );
