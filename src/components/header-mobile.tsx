@@ -49,6 +49,7 @@ const HeaderMobile = () => {
       <motion.ul
         variants={variants}
         className="absolute grid w-full gap-3 px-3 py-24"
+        role="menu"
       >
         {SIDENAV_ITEMS.map((item, idx) => {
           const isLastItem = idx === SIDENAV_ITEMS.length - 1; // Check if it's the last item
@@ -133,7 +134,7 @@ const MenuItem = ({
   children?: ReactNode;
 }) => {
   return (
-    <motion.li variants={MenuItemVariants} className={className}>
+    <motion.li variants={MenuItemVariants} className={className} role="menuitem" >
       {children}
     </motion.li>
   );
