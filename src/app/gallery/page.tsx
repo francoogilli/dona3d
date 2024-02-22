@@ -1,12 +1,11 @@
 "use client";
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import SimpleGallery from './gallery';
 import { Icon } from '@iconify/react';
 import { storage } from "../../firebase/config";
 import { getDownloadURL, ref } from "firebase/storage";
-import { useState, useEffect } from "react";
 
-function pageGallery() {
+function PageGallery() {
   const pageSize = 20;
   const [imageUrls, setImageUrls] = useState<Array<{ largeURL: string; thumbnailURL: string; width: number; height: number; }>>([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -100,4 +99,4 @@ function pageGallery() {
   );
 }
 
-export default pageGallery;
+export default PageGallery;
