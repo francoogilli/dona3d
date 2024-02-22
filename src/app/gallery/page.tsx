@@ -68,7 +68,9 @@ function PageGallery() {
     <div className="">
       <SimpleGallery galleryID="myGallery" images={visibleImages} />
       <div className='flex justify-center items-center pt-20'>
-        <button onClick={() => {
+        <button 
+        aria-label='Previous Page'
+        onClick={() => {
           setCurrentPage(prev => Math.max(prev - 1, 1));
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }} disabled={currentPage === 1}
@@ -87,7 +89,9 @@ function PageGallery() {
             </button>
           </div>
         ))}
-        <button onClick={() => {
+        <button 
+        aria-label='Next Page'
+        onClick={() => {
           setCurrentPage(prev => Math.min(prev + 1, totalPages));
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }} disabled={currentPage === totalPages}
