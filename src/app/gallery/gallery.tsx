@@ -45,6 +45,7 @@ export default function SimpleGallery(props: { galleryID: string | undefined; im
         </div>
       {props.images.map((image, index) => (
         <a
+          aria-label='Open image in new tab'
           href={image.largeURL}
           data-pswp-width={image.width}
           data-pswp-height={image.height}
