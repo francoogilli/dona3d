@@ -3,6 +3,7 @@
 import React from "react";
 import  ThemeSwitcher  from "./theme-switcher";
 import { SIDENAV_ITEMS } from 'src/constants';
+import { Icon } from "@iconify/react";
 const Header = () => {
     
     
@@ -28,7 +29,12 @@ const Header = () => {
 
         <div className="flex items-center space-x-4 mr-10 sm:mr-0">
           <ThemeSwitcher />
-          <span className="hidden md:block text-white cursor-pointer tracking-tight text-sm font-semibold bg-gradient-to-br from-[#455eb5] via-[#5643cc] to-[#673fd7] px-3 py-1.5 rounded-full">Contacto</span>
+          <a href="mailto:rafaeldona3d@gmail" className="sm:block hidden" target="_blank" rel="noreferrer">
+          <Icon icon="heroicons-outline:mail" className="cursor-pointer text-zinc-900 dark:text-zinc-200" width="24" height="24" />
+          </a>
+          <a href="https://wa.me/543563411515" className="sm:block hidden" target="_blank" rel="noreferrer">
+            <Icon icon="bi:whatsapp" className="cursor-pointer text-zinc-900 dark:text-zinc-200" width="20" height="20" />
+          </a>
         </div>
       </div>
     </div>
