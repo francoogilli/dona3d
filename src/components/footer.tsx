@@ -12,14 +12,14 @@ export default function Footer(){
                             <p className='font-semibold text-sm'>Nuestras redes</p>
                         </div>
                         <div className="flex w-full gap-4">
-                            <a href="" aria-label='Ir a nuestra pagina de Facebook' className="outline-none transition duration-150 ease-in-out 0 focus-visible:ring-slate-400 rounded-full">
+                            <a href="https://www.facebook.com/dona3d/" target='_blank' rel="noreferrer" aria-label='Ir a nuestra pagina de Facebook' className="outline-none transition duration-150 ease-in-out 0 focus-visible:ring-slate-400 rounded-full">
                             <Icon icon="akar-icons:facebook-fill" width="24" height="24" />                           
                             </a>
                             
-                            <a href="" aria-label='Ir a nuestra pagina de Instagram' className="outline-none transition duration-150 ease-in-out 0 focus-visible:ring-slate-400 rounded-full">
+                            <a href="https://www.instagram.com/dona3d_/" target='_blank' rel="noreferrer" aria-label='Ir a nuestra pagina de Instagram' className="outline-none transition duration-150 ease-in-out 0 focus-visible:ring-slate-400 rounded-full">
                             <Icon icon="bi:instagram" width="24" height="24" />                           
                             </a>
-                            <a href="" aria-label='Ir a nuestra pagina de Whatsapp' className="outline-none transition duration-150 ease-in-out 0 focus-visible:ring-slate-400 rounded-full">
+                            <a href="https://wa.me/543563411515" target='_blank' rel="noreferrer" aria-label='Ir a nuestra pagina de Whatsapp' className="outline-none transition duration-150 ease-in-out 0 focus-visible:ring-slate-400 rounded-full">
                             <Icon icon="simple-icons:whatsapp" width="24" height="24" />                           
                             </a>
                         </div>
