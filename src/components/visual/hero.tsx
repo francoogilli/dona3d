@@ -19,7 +19,7 @@ export default function Hero(){
             Brindamos servicios de impresión de alta calidad para transformar en realidad sus proyectos y diseños.
             </h2>
             <div className="flex flex-col sm:flex-row justify-center md:justify-start text-base items-center gap-4">
-              <a href="" className="flex justify-center items-center font-semibold text-white from-[#6e7afd] to-[#4236f6] bg-gradient-to-bl rounded-full px-6 py-3 w-48 sm:w-auto">
+              <a href="/contact" className="flex justify-center items-center font-semibold text-white from-[#6e7afd] to-[#4236f6] bg-gradient-to-bl rounded-full px-6 py-3 w-48 sm:w-auto">
                 Contactar
                 <Icon icon="mingcute:right-fill" className="ml-2" />
               </a>
