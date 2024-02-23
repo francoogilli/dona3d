@@ -28,7 +28,7 @@ export default function SimpleGallery(props: { galleryID: string | undefined; im
   if (!props.images) return null; // Return null if props.images is undefined
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4" id={props.galleryID}>
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6" id={props.galleryID}>
         
         <div className="after:content relative col-span-1 row-span-3 flex flex-col items-center justify-end gap-4 overflow-hidden rounded-lg bg-black/5 dark:bg-white/5 px-6 pb-16 sm:pb-6 pt-64 text-center text-black dark:text-white shadow-highlight after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight sm:col-span-2 lg:col-span-1 lg:row-span-1 lg:pt-0">
           <div className="absolute inset-0 flex items-center justify-center opacity-20">
@@ -52,7 +52,7 @@ export default function SimpleGallery(props: { galleryID: string | undefined; im
           data-pswp-height={image.height}
           key={props.galleryID + '-' + index}
           target="_blank"
-          className='rounded-lg overflow-hidden'
+          className='rounded-lg hover:scale-105 duration-300 overflow-hidden'
           rel="noreferrer"
         >
           <img src={image.thumbnailURL} className='' width={400} height={400} alt="" />
