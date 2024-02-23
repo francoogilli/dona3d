@@ -12,7 +12,7 @@ const Materials: React.FC = () => {
           {MaterialsData.map((material, index) => (
             <div key={index} className=" bg-black/5 dark:bg-white/5 p-6 rounded-2xl shadow-md">
               <h3 className="text-2xl text-center font-bold mb-4">{material.title}</h3>
-              <Image src={`/${material.image}`} className="mx-auto size-44" alt="petg" width={180} height={180}/>
+              <Image src={`/${material.image}`} className="mx-auto hover:scale-105 transition-transform duration-500 size-44" alt="petg" width={180} height={180}/>
               <ul className="list-none sm:px-4 pb-4">
                 {material.characters.map((character, index) => (
                   <React.Fragment key={index}>
