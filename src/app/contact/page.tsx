@@ -99,7 +99,7 @@ export default function Contact() {
                 name="firstName"
                 value={formData.firstName}
                 onChange={handleChange}
-                className={`px-4 py-3 text-sm placeholder:text-black dark:placeholder:text-zinc-200 sm:bg-white/50 bg-white/30 border ${errorFields.includes('firstName') ? 'border-red-500' : 'border-zinc-300'} dark:border-neutral-900 sm:dark:bg-black/70 dark:bg-black/30 rounded-xl`}
+                className={`px-4 py-3 text-sm placeholder:text-black dark:placeholder:text-zinc-200 sm:bg-white/50 bg-white/30 border ${errorFields.includes('firstName') ? 'border-red-500' : 'border-zinc-300'} dark:border-neutral-900 dark:bg-zinc-900 rounded-xl`}
                 placeholder="Ingrese su nombre" />
               {errorFields.includes('firstName') && <p className="text-red-600 dark:text-red-500 font-semibold text-sm">Por favor ingrese su nombre.</p>}
             </div>
@@ -111,7 +111,7 @@ export default function Contact() {
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleChange}
-                className={`px-4 py-3 text-sm placeholder:text-black dark:placeholder:text-zinc-200 sm:bg-white/50 bg-white/30 border ${errorFields.includes('lastName') ? 'border-red-500' : 'border-zinc-300'} dark:border-neutral-900 sm:dark:bg-black/70 dark:bg-black/30 rounded-xl`}
+                className={`px-4 py-3 text-sm placeholder:text-black dark:placeholder:text-zinc-200 sm:bg-white/50 bg-white/30 border ${errorFields.includes('lastName') ? 'border-red-500' : 'border-zinc-300'} dark:border-neutral-900 dark:bg-zinc-900 rounded-xl`}
                 placeholder="Ingrese su apellido" />
               {errorFields.includes('lastName') && <p className="text-red-600 dark:text-red-500 font-semibold text-sm">Por favor ingrese su apellido.</p>}
             </div>
@@ -124,7 +124,7 @@ export default function Contact() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className={`px-4 py-3 text-sm placeholder:text-black dark:placeholder:text-zinc-200 sm:bg-white/50 bg-white/30 border ${errorFields.includes('email') ? 'border-red-500' : 'border-zinc-300'} dark:border-neutral-900 sm:dark:bg-black/70 dark:bg-black/30 rounded-xl`}
+              className={`px-4 py-3 text-sm placeholder:text-black dark:placeholder:text-zinc-200 sm:bg-white/50 bg-white/30 border ${errorFields.includes('email') ? 'border-red-500' : 'border-zinc-300'} dark:border-neutral-900 dark:bg-zinc-900 rounded-xl`}
               placeholder="Ingrese su correo" />
             {errorFields.includes('email') && <p className="text-red-600 dark:text-red-500 font-semibold text-sm">Por favor ingrese su correo.</p>}
           </div>
@@ -136,7 +136,7 @@ export default function Contact() {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className={`px-4 py-3 text-sm placeholder:text-black dark:placeholder:text-zinc-200 sm:bg-white/50 bg-white/30 border ${errorFields.includes('message') ? 'border-red-500' : 'border-zinc-300'} dark:border-neutral-900 sm:dark:bg-black/70 dark:bg-black/30 rounded-xl resize-none`}
+              className={`px-4 py-3 text-sm placeholder:text-black dark:placeholder:text-zinc-200 sm:bg-white/50 bg-white/30 border ${errorFields.includes('message') ? 'border-red-500' : 'border-zinc-300'} dark:border-neutral-900 dark:bg-zinc-900 rounded-xl resize-none`}
               placeholder="Escriba su mensaje"></textarea>
             {errorFields.includes('message') && <p className="text-red-600 dark:text-red-500 font-semibold text-sm">Por favor escriba su mensaje.</p>}
           </div>
