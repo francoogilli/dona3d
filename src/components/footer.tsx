@@ -29,18 +29,18 @@ export default function Footer(){
                     <div className="grid w-full grid-cols-2 gap-20 sm:w-full lg:grid-cols-4">
                         <div className='flex flex-col gap-4'>
                             <p className='mb-2 ml-1.5 text-sm dark:text-white font-semibold'>Contacto</p>
-                            <a href="" className='text-sm font-medium dark:text-zinc-400'>Libertad 494</a>
-                            <a href="" className='text-sm font-medium dark:text-zinc-400'>Miramar, Córdoba, Argentina</a>
-                            <a href="" className='text-sm font-medium dark:text-zinc-400'>rafaeldona3d@gmail.com</a>
-                            <a href="" className='text-sm font-medium dark:text-zinc-400'>+54 3563 411515</a>
+                            <a href="#" className='text-sm font-medium dark:text-zinc-400'>Libertad 494</a>
+                            <a href="#" className='text-sm font-medium dark:text-zinc-400'>Miramar, Córdoba, Argentina</a>
+                            <a href="#" className='text-sm font-medium dark:text-zinc-400'>rafaeldona3d@gmail.com</a>
+                            <a href="#" className='text-sm font-medium dark:text-zinc-400'>+54 3563 411515</a>
                         </div>
                         <div className='flex flex-col gap-4'>
                             <p className='mb-2 ml-1.5 text-sm dark:text-white font-semibold'>Menu</p>
-                            <a href="" className='text-sm font-medium dark:text-zinc-400'>Home</a>
-                            <a href="" className='text-sm font-medium dark:text-zinc-400'>Servicio</a>
-                            <a href="" className='text-sm font-medium dark:text-zinc-400'>Materiales</a>
-                            <a href="" className='text-sm font-medium dark:text-zinc-400'>Galeria</a>
-                            <a href="" className='text-sm font-medium dark:text-zinc-400'>Contacto</a>
+                            <a href="/" className='text-sm font-medium dark:text-zinc-400'>Home</a>
+                            <a href="/services" className='text-sm font-medium dark:text-zinc-400'>Servicio</a>
+                            <a href="/materials" className='text-sm font-medium dark:text-zinc-400'>Materiales</a>
+                            <a href="/gallery" className='text-sm font-medium dark:text-zinc-400'>Galeria</a>
+                            <a href="/contact" className='text-sm font-medium dark:text-zinc-400'>Contacto</a>
                         </div>
                         <div className='flex flex-col gap-4'>
                             <p className='mb-2 ml-1.5 text-sm dark:text-white font-semibold'>Servicios</p>
