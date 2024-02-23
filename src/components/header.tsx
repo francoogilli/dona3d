@@ -30,10 +30,10 @@ const Header = () => {
         <div className="flex items-center space-x-4 mr-10 sm:mr-0">
           <ThemeSwitcher />
           <a href="mailto:rafaeldona3d@gmail" className="sm:block hidden" target="_blank" rel="noreferrer">
-          <Icon icon="heroicons-outline:mail" className="cursor-pointer text-zinc-900 dark:text-zinc-200" width="24" height="24" />
+          <Icon icon="heroicons-outline:mail" className="cursor-pointer dark:text-zinc-200 dark:hover:text-zinc-100 text-zinc-800 hover:text-zinc-900" width="24" height="24" />
           </a>
           <a href="https://wa.me/543563411515" className="sm:block hidden" target="_blank" rel="noreferrer">
-            <Icon icon="bi:whatsapp" className="cursor-pointer text-zinc-900 dark:text-zinc-200" width="20" height="20" />
+            <Icon icon="bi:whatsapp" className="cursor-pointer dark:text-zinc-200 dark:hover:text-zinc-100 text-zinc-800 hover:text-zinc-900" width="20" height="20" />
           </a>
         </div>
       </div>
